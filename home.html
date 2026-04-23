@@ -6,6 +6,7 @@
 <title>Raízes de Concreto | São Paulo Invisível</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Work+Sans:wght@300;400;500&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css" />
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -96,86 +97,26 @@
           },
         }
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .archaeology-grid {
-            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .marker-pulse {
-            box-shadow: 0 0 0 0 rgba(211, 84, 56, 0.7);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 84, 56, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(211, 84, 56, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(211, 84, 56, 0); }
-        }
-    </style>
+<link rel="stylesheet" href="./css/home.css">
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
-<div class="text-2xl font-black text-white tracking-widest uppercase font-['Epilogue']">
-            Raízes de Concreto
-        </div>
-<nav class="hidden md:flex space-x-8">
-<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Arqueologia</a>
-<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Territórios</a>
-<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Memória</a>
-<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Linha do Tempo</a>
-</nav>
-<div class="flex items-center space-x-4">
-<div class="relative">
-<span class="material-symbols-outlined text-white/50 absolute left-3 top-1/2 -translate-y-1/2">search</span>
-<input class="bg-white/5 border-none text-xs tracking-widest uppercase py-2 pl-10 pr-4 focus:ring-1 focus:ring-on-tertiary-container w-48" placeholder="BUSCAR..." type="text"/>
-</div>
-<span class="material-symbols-outlined text-white hover:text-on-tertiary-container cursor-pointer duration-300">account_circle</span>
-</div>
+<!-- Navegação Fixa -->
+<header class="fixed top-0 w-full z-50 bg-[#121212]/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
+    <div class="text-2xl font-black text-white tracking-widest uppercase font-['Epilogue']">
+        Raízes de Concreto
+    </div>
+      <nav class="flex space-x-8">
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./home.html">Início</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./problematica.html">Problematica Social</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./quiz.html">quiz</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="bairros.html">Bairros</a>
+             <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="3.html">3</a>
+    </nav>
 </header>
-<!-- SideNavBar -->
-<aside class="h-screen w-64 fixed left-0 top-0 pt-20 border-r border-white/10 bg-[#1E1E1E] z-40 hidden xl:flex flex-col">
-<div class="px-6 py-8">
-<div class="flex items-center space-x-3 mb-2">
-<img class="w-10 h-10 rounded-full border border-white/20" data-alt="close-up portrait of a mature academic researcher with glasses in a dimly lit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCrqbayP-MykJePsprNH07XdkOY-XGaMsIdTNJsQ3HxC7FiLiLzQgpP4SHLj9G80X8v1eBuO6JVFtbV_ItPbFxLIlCeRV0nUODIDZjZp-hPP-ElFSj4EZZ75-dbpMVGlEIZ7fJoYQcgRcXaE3bHqCLPALYX8eBOcLx6PI1Pvp1FYJe1YXBXEdbz7f45rDPZiNMPXQy5yaQ3wWXrOFajYcAc6iAqg3O6sGvmfVUz8H1uBfWaY-5SYNOkbTtLEACPGdhFZZstRlXnw"/>
-<div>
-<p class="text-white font-bold font-['Epilogue'] text-sm uppercase">Laboratório Urbano</p>
-<p class="text-gray-500 text-xs">Exploração Nível 4</p>
-</div>
-</div>
-</div>
-<nav class="flex flex-col space-y-2">
-<a class="text-gray-500 px-6 py-4 flex items-center space-x-4 hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined">explore</span>
-<span class="font-['Epilogue'] text-sm font-medium uppercase">Expedições</span>
-</a>
-<a class="text-gray-500 px-6 py-4 flex items-center space-x-4 hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined">inventory_2</span>
-<span class="font-['Epilogue'] text-sm font-medium uppercase">Arquivos</span>
-</a>
-<a class="bg-white/5 text-on-tertiary-container border-l-4 border-on-tertiary-container px-6 py-4 flex items-center space-x-4 transition-all duration-200" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
-<span class="font-['Epilogue'] text-sm font-medium uppercase">Mapa Social</span>
-</a>
-<a class="text-gray-500 px-6 py-4 flex items-center space-x-4 hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined">account_tree</span>
-<span class="font-['Epilogue'] text-sm font-medium uppercase">Raízes</span>
-</a>
-</nav>
-<div class="mt-auto p-6">
-<button class="w-full bg-on-tertiary-fixed-variant hover:bg-on-tertiary-container text-white py-3 font-label-caps uppercase transition-colors duration-300 tracking-tighter">
-                Nova Expedição
-            </button>
-</div>
-</aside>
-<main class="xl:ml-64 pt-20">
+
+<main class="">
 <!-- Hero Section -->
-<section class="relative h-[921px] flex items-center px-margin archaeology-grid">
+<section id="hero" class="relative h-[921px] flex items-center px-margin archaeology-grid">
 <div class="absolute inset-0 z-0">
 <img class="w-full h-full object-cover opacity-40 grayscale" data-alt="high contrast aerial view of Sao Paulo skyline at night with glowing street lights and dark concrete architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhe87k-9Nj6Zcxpoy-e8P3f1lQ1AlJETIhUM3lqzY7GFqFH9yxJbOl49iLvbRCyeT7-sJmrKiKWRMBz5Lcfd9SeBp3U8TN2b9ADM1ZvfkkrHeSbGowzY_eHpxcnttQJgeunR7J7F04Pq4EJAXuqon8cEH7jtTCdl-2gOSpRD6BOCfnh9aOSGiW-f6vQqBW17DOSKP7gX9zWGHZ4ySz7s3uQWf6bluTMERfEWwg_HK1L1VOyX7CKJx_TW6cBWM6xJJLsFhgcveIxQ"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
@@ -193,7 +134,7 @@
 </div>
 </section>
 <!-- Interactive Map Section -->
-<section class="py-section-gap px-margin bg-surface-container-low">
+<section id="mapa" class="py-section-gap px-margin bg-surface-container-low">
 <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-white/5 pb-8">
 <div>
 <h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter">Mapa Social de Conflitos e Identidades</h2>
@@ -246,7 +187,7 @@
 </div>
 </section>
 <!-- Urban Archaeology Section (Bento Grid) -->
-<section class="py-section-gap px-margin archaeology-grid">
+<section id="arqueologia" class="py-section-gap px-margin archaeology-grid">
 <h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter mb-stack-lg">Arqueologia Urbana: Achados</h2>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-8 group relative h-[500px] bg-surface-container overflow-hidden border border-white/10">
@@ -292,7 +233,10 @@
 </div>
 </section>
 <!-- Documentary Carousel Section -->
-<section class="py-section-gap px-margin bg-surface-container-lowest">
+<section id="docs" class="py-section-gap px-margin bg-surface-container-lowest">
+    html {
+        scroll-behavior: smooth;
+    }
 <div class="flex justify-between items-center mb-stack-lg">
 <h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter">Documentários: Vozes do Concreto</h2>
 <div class="flex space-x-2">
@@ -378,6 +322,7 @@
 </div>
 </footer>
 </main>
+<s defer src="script.js"></script>
 <style>
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -387,4 +332,5 @@
             scrollbar-width: none;
         }
     </style>
-</body></html>
+</body>
+</html>

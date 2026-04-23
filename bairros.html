@@ -97,48 +97,19 @@
           },
         }
       </script>
-<style>
-        .glass-panel {
-            background: rgba(30, 30, 30, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .erasure-card {
-            position: relative;
-            overflow: hidden;
-        }
-        .erasure-card .reveal-overlay {
-            background: #121212;
-            opacity: 0.85;
-            transition: opacity 0.4s ease-in-out;
-        }
-        .erasure-card:hover .reveal-overlay {
-            opacity: 0.2;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #121212;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #454747;
-        }
-    </style>
+<link rel="stylesheet" href="./css/bairros.css">
 </head>
 <body class="bg-surface text-on-surface font-body-md selection:bg-on-tertiary-container selection:text-white">
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
 <div class="text-2xl font-black text-white tracking-widest uppercase font-headline-lg">Raízes de Concreto</div>
-<nav class="hidden md:flex items-center space-x-8 font-['Epilogue'] tracking-tighter uppercase font-bold text-sm">
-<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Arqueologia</a>
-<a class="text-orange-600 border-b-2 border-orange-600 pb-1" href="#">Territórios</a>
-<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Memória</a>
-<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Linha do Tempo</a>
-</nav>
+  <nav class="flex space-x-8">
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./home.html">Início</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./problematica.html">Problematica Social</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./quiz.html">quiz</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="bairros.html">bairros</a>
+             <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="3.html">3</a>
+    </nav>
 <div class="flex items-center space-x-4">
 <div class="relative flex items-center bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
 <input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-gray-600 w-48" placeholder="Buscar território..." type="text"/>
@@ -149,45 +120,9 @@
 </button>
 </div>
 </header>
-<!-- SideNavBar -->
-<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-[#1E1E1E] border-r border-white/10 flex flex-col hidden md:flex z-40">
-<div class="p-8 border-b border-white/5 mb-4">
-<div class="flex items-center space-y-1">
-<div class="w-10 h-10 bg-on-tertiary-fixed-variant rounded-lg flex items-center justify-center mr-3">
-<span class="material-symbols-outlined text-white" data-icon="science">science</span>
-</div>
-<div>
-<h3 class="text-white font-bold font-headline-md text-sm leading-tight">Laboratório Urbano</h3>
-<p class="text-gray-500 text-xs uppercase tracking-widest">Exploração Nível 4</p>
-</div>
-</div>
-</div>
-<nav class="flex flex-col space-y-2 font-['Epilogue'] text-sm font-medium">
-<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="explore">explore</span>
-                Expedições
-            </a>
-<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="inventory_2">inventory_2</span>
-                Arquivos
-            </a>
-<a class="bg-white/5 text-orange-600 border-l-4 border-orange-600 px-6 py-4 flex items-center" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="map" style="font-variation-settings: 'FILL' 1;">map</span>
-                Mapa Social
-            </a>
-<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
-<span class="material-symbols-outlined mr-4" data-icon="account_tree">account_tree</span>
-                Raízes
-            </a>
-</nav>
-<div class="mt-auto p-6">
-<button class="w-full bg-on-tertiary-fixed-variant text-white py-4 font-label-caps uppercase text-xs tracking-widest hover:brightness-110 transition-all">
-                Nova Expedição
-            </button>
-</div>
-</aside>
+
 <!-- Main Content Area -->
-<main class="ml-64 pt-20 custom-scrollbar overflow-y-auto">
+<main class="pt-20 custom-scrollbar overflow-y-auto">
 <!-- Hero Header -->
 <section class="p-8 md:p-12 border-b border-white/5 bg-gradient-to-br from-[#121212] to-[#1E1E1E]">
 <div class="max-w-7xl mx-auto">
