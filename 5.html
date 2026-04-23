@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Raízes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Work+Sans:wght@300;400;500&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #121212;
+            color: #e3e2e2;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .glass-card {
+            backdrop-filter: blur(20px);
+            background-color: rgba(30, 30, 30, 0.7);
+        }
+        .grid-blueprint {
+            background-image: linear-gradient(#ffffff05 1px, transparent 1px), linear-gradient(90deg, #ffffff05 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#881f07",
+                      "on-error": "#690005",
+                      "primary": "#c8c6c5",
+                      "surface-container-lowest": "#0d0e0f",
+                      "secondary-container": "#454747",
+                      "outline-variant": "#444748",
+                      "on-tertiary-container": "#d35438",
+                      "on-surface": "#e3e2e2",
+                      "on-tertiary": "#630e00",
+                      "on-secondary": "#2f3131",
+                      "tertiary-fixed-dim": "#ffb4a4",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-background": "#e3e2e2",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "tertiary-fixed": "#ffdad3",
+                      "surface-container-highest": "#343535",
+                      "secondary": "#c6c6c6",
+                      "primary-fixed": "#e5e2e1",
+                      "on-surface-variant": "#c4c7c7",
+                      "surface-variant": "#343535",
+                      "inverse-on-surface": "#2f3031",
+                      "surface-container-low": "#1b1c1c",
+                      "surface-container": "#1f2020",
+                      "surface-bright": "#383939",
+                      "background": "#121414",
+                      "surface": "#121414",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed": "#1c1b1b",
+                      "tertiary": "#ffb4a4",
+                      "surface-dim": "#121414",
+                      "on-secondary-container": "#b5b5b5",
+                      "surface-container-high": "#292a2a",
+                      "outline": "#8e9192",
+                      "on-tertiary-fixed": "#3d0600",
+                      "on-primary": "#313030",
+                      "error-container": "#93000a",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-tint": "#c8c6c5",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#474646",
+                      "inverse-surface": "#e3e2e2",
+                      "tertiary-container": "#2c0300",
+                      "primary-container": "#121212",
+                      "on-primary-container": "#7e7d7d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin": "64px",
+                      "base": "8px",
+                      "section-gap": "128px",
+                      "stack-md": "32px",
+                      "stack-lg": "64px",
+                      "stack-sm": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Epilogue"],
+                      "body-lg": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "display-xl": ["Epilogue"],
+                      "label-caps": ["Space Grotesk"],
+                      "headline-md": ["Epilogue"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-on-tertiary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 h-20 px-8 flex justify-between items-center">
+<div class="text-2xl font-black text-white tracking-widest uppercase font-headline-lg">Raízes de Concreto</div>
+<nav class="hidden md:flex space-x-8">
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Arqueologia</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Territórios</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-orange-600 border-b-2 border-orange-600 pb-1" href="#">Memória</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="#">Linha do Tempo</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-white/5 p-2 rounded-full transition-all">account_circle</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-[#1E1E1E] border-r border-white/10 shadow-2xl z-40 hidden lg:flex flex-col">
+<div class="p-8 border-b border-white/5">
+<h2 class="text-white font-bold font-headline-md text-lg">Laboratório Urbano</h2>
+<p class="text-gray-500 font-body-md text-xs uppercase tracking-widest">Exploração Nível 4</p>
+</div>
+<nav class="flex flex-col mt-4">
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all font-['Epilogue'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">explore</span> Expedições
+            </a>
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all font-['Epilogue'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">inventory_2</span> Arquivos
+            </a>
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all font-['Epilogue'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">map</span> Mapa Social
+            </a>
+<a class="flex items-center gap-4 bg-white/5 text-orange-600 border-l-4 border-orange-600 px-6 py-4 transition-all font-['Epilogue'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_tree</span> Raízes
+            </a>
+</nav>
+<div class="mt-auto p-6">
+<button class="w-full bg-on-tertiary-fixed-variant text-white py-4 font-label-caps uppercase tracking-tighter hover:brightness-110 transition-all">
+                Nova Expedição
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="lg:pl-64 pt-20 min-h-screen grid-blueprint">
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-end p-margin overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="dramatic high-contrast black and white architecture of a brutalist concrete building in sao paulo with geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSrTAgQcRORiz2_VVE4uGCMl5eP5PZ4Nh_VJYerjPWiA3YZmzdQPvmlWUpqm0grY9ygCo0zrpcLzfBR6lvRt9T1Bnye3aXgOyKpblROcL7ZUBNnxoy8j10neduqJQb1djONm_COAB4ECwF99Qwk9wDeDEWsL-Ms23-l2_t2OzeGMkF05VDSh2QtiJ2agQo7U7ci_j3j009TtOjug1heiMVNHKkMzSk9d5XVFFLJAL-tEr4xXW_VoYJA_ZI_x6DE7Vl7tNU-FX7MA"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<span class="font-label-caps text-on-tertiary-container mb-4 block">CONSCIENTIZAÇÃO &amp; MEMÓRIA</span>
+<h1 class="font-display-xl text-white mb-6">A CIDADE QUE <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-on-tertiary-fixed-variant">SOTERRA</span> SEU PASSADO.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Entenda os mecanismos invisíveis que moldam o território urbano: da gentrificação predatória ao racismo estrutural que define quem pode ocupar o centro.</p>
+</div>
+</section>
+<!-- Infographics Section: Layered Archaeology -->
+<section class="p-margin py-section-gap grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+<h2 class="font-headline-lg text-white mb-8">Arquitetura da Exclusão</h2>
+<p class="font-body-md text-on-surface-variant mb-12">
+                    A gentrificação não é um fenômeno natural de 'revitalização'. É um processo deliberado de substituição de classes e apagamento de identidades ancestrais. Em São Paulo, este movimento possui recortes raciais profundos.
+                </p>
+<div class="space-y-stack-md">
+<div class="border-l-2 border-orange-600 pl-6">
+<div class="text-4xl font-display-xl text-white">82%</div>
+<p class="font-label-caps text-on-surface-variant">DA POPULAÇÃO REMOVIDA DE ÁREAS CENTRAIS É NEGRA OU PARDA</p>
+</div>
+<div class="border-l-2 border-white/10 pl-6">
+<div class="text-4xl font-display-xl text-white">340%</div>
+<p class="font-label-caps text-on-surface-variant">VALORIZAÇÃO IMOBILIÁRIA APÓS "LIMPEZAS" SOCIAIS</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 relative h-[600px]">
+<!-- Bento Grid Infographic -->
+<div class="grid grid-cols-2 grid-rows-2 gap-4 h-full">
+<div class="bg-surface-container-high p-8 flex flex-col justify-end glass-card border border-white/5">
+<span class="material-symbols-outlined text-orange-600 text-4xl mb-4">apartment</span>
+<h4 class="font-headline-md text-lg text-white uppercase">Especulação</h4>
+<p class="font-body-md text-sm text-gray-500">O solo urbano como ativo financeiro, ignorando a função social da propriedade.</p>
+</div>
+<div class="bg-surface-container-high p-8 flex flex-col justify-end glass-card border border-white/5 relative overflow-hidden">
+<img class="absolute inset-0 object-cover opacity-20 hover:opacity-40 transition-opacity duration-700" data-alt="aerial urban texture of a dense city neighborhood showing a contrast between old small houses and new high-rise towers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFZTRUX1_R6XVLujcWVu-2OqFtzM-ONTLQAub02tRHDD7x-fxJyn5y3d0BUNM0T3rZxas30CqruNCcRzpzbdyu7e6Upqsoh01FDoFybUqshAt3qoZlWIJv2xeEpI36YEdMQAc75Ne5mfkiwKPL_RDndm0GjDwL-DWpbnKK-EU1JM6tjQ_z8o8Vv2vm17K4dYrOeEMRYSa6Zge3i_ORHz2qYGGblEGPToWwefXgyVgEfP-n01nDSEi_HbvMhE4FmjG9pN_I_RQxfg"/>
+<h4 class="font-headline-md text-lg text-white uppercase relative z-10">Apagamento</h4>
+<p class="font-body-md text-sm text-gray-500 relative z-10">Destruição de marcos culturais para dar lugar a estéticas homogêneas.</p>
+</div>
+<div class="col-span-2 bg-on-tertiary p-12 flex items-center gap-8 border border-white/10">
+<div class="flex-1">
+<h4 class="font-headline-lg text-white uppercase tracking-tighter">Racismo Estrutural</h4>
+<p class="font-body-md text-white/70">A manutenção de barreiras invisíveis que impedem o acesso de corpos pretos e periféricos à infraestrutura qualificada do centro expandido.</p>
+</div>
+<span class="material-symbols-outlined text-8xl opacity-20">history_edu</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Guide: Como Agir para Resistir -->
+<section class="p-margin py-section-gap bg-surface-container-lowest relative">
+<div class="max-w-2xl mb-16">
+<span class="font-label-caps text-on-tertiary-container mb-4 block">GUIA PRÁTICO</span>
+<h2 class="font-headline-lg text-white">COMO AGIR PARA RESISTIR</h2>
+<p class="font-body-md text-on-surface-variant">A resistência começa no reconhecimento e na organização coletiva. Use estas ferramentas para proteger seu território.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="group relative bg-[#1E1E1E] p-10 border border-white/5 hover:border-orange-600 transition-colors duration-500">
+<span class="font-display-xl text-white/5 absolute top-4 right-8 group-hover:text-orange-600/20 transition-colors">01</span>
+<h3 class="font-headline-md text-white mb-6 uppercase">Mapear</h3>
+<p class="font-body-md text-gray-400 mb-8">Identifique marcos históricos, terreiros, ocupações e comércios locais que definem a identidade do bairro.</p>
+<div class="h-1 w-12 bg-orange-600 group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Step 2 -->
+<div class="group relative bg-[#1E1E1E] p-10 border border-white/5 hover:border-orange-600 transition-colors duration-500">
+<span class="font-display-xl text-white/5 absolute top-4 right-8 group-hover:text-orange-600/20 transition-colors">02</span>
+<h3 class="font-headline-md text-white mb-6 uppercase">Articular</h3>
+<p class="font-body-md text-gray-400 mb-8">Una-se a associações de moradores e coletivos de preservação. A voz coletiva é mais difícil de silenciar.</p>
+<div class="h-1 w-12 bg-orange-600 group-hover:w-full transition-all duration-700"></div>
+</div>
+<!-- Step 3 -->
+<div class="group relative bg-[#1E1E1E] p-10 border border-white/5 hover:border-orange-600 transition-colors duration-500">
+<span class="font-display-xl text-white/5 absolute top-4 right-8 group-hover:text-orange-600/20 transition-colors">03</span>
+<h3 class="font-headline-md text-white mb-6 uppercase">Inventariar</h3>
+<p class="font-body-md text-gray-400 mb-8">Utilize o Inventário Participativo para oficializar a importância cultural do seu território perante o Estado.</p>
+<div class="h-1 w-12 bg-orange-600 group-hover:w-full transition-all duration-700"></div>
+</div>
+</div>
+</section>
+<!-- IPHAN Section -->
+<section class="p-margin py-section-gap grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 md:order-1">
+<div class="aspect-square bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale" data-alt="close up of an old textured stone wall with layers of moss and history in an urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfch6ps_lyq5qdZv0Qzcw74Z14rICmYlk1fA55FFK6X7CXQcYo-BcMXu3vwsU0ILl5OZX6zrWROnnJIaCjrBIJ3gKoU7KCXwMVNMuo5ZPAmqQeAP8_qihoER4EUIvda--VO4tKGbs20w8aI3FjbcYqSi0T6hv34BNuxQupQkYzkybM_u3ghPc7WsS1e-4y44D-YXfZ_VbSsK8JfhHyARVdb-fCoJHAYJ_slc3gaOaXOPpwh0Y698CFwN36In2CD64fOowz2Y0H0w"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-black/80 p-12 text-center border border-white/10 glass-card">
+<img class="h-12 invert brightness-0 mx-auto mb-4" data-alt="official logo of IPHAN the brazilian institute for historical and artistic heritage in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByO-88cP70qmFg5l9FsqIzvCYtSDn9akI8_NQmezDHvK9LNhGnHQK9bEM4k3Y0gpenkzg1dawCavvGTsf8JJaZFDnylseslL0WIrJAtx72sJEsH3974e2HEiNK899scHXbMH2ttv2T1eL7BuDP-8Cw_S9bQeiJtrbx9ra8yhIRiAAMVTe-rK1UXMJHQirus-4rrBV6k2noYucd53TZ_rHik27fy1vrDPrn5RZMadXi_siuhC7ubLLuLu2e0NLklK2vAsthvdqZeQ"/>
+<p class="font-label-caps text-white text-xs">PARCEIRO INSTITUCIONAL</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-caps text-on-tertiary-container mb-4 block">INSTITUCIONAL</span>
+<h2 class="font-headline-lg text-white mb-8">O IPHAN E OS INVENTÁRIOS PARTICIPATIVOS</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">
+                    O Inventário Participativo é uma ferramenta de cidadania. Através dele, a própria comunidade decide o que deve ser preservado, indo além da visão técnica e acadêmica tradicional do patrimônio.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="group flex items-center justify-between border border-white/10 p-6 hover:bg-white/5 transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-orange-600">file_download</span>
+<span class="font-label-caps text-white">Guia de Inventário Participativo (.PDF)</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</button>
+<button class="group flex items-center justify-between border border-white/10 p-6 hover:bg-white/5 transition-all">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-orange-600">description</span>
+<span class="font-label-caps text-white">Metodologia de Salvaguarda (.PDF)</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#121212] border-t border-white/10 py-12 px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="text-lg font-bold text-white font-headline-md mb-4 uppercase">Raízes de Concreto</div>
+<p class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600">© 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors" href="#">Manifesto</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors" href="#">Dados Abertos</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors" href="#">Equipe</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors" href="#">Contato</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors" href="#">Termos de Uso</a>
+</div>
+</footer>
+</main>
+</body></html>  

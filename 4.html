@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expedições</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@300;400;500&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#881f07",
+                    "on-error": "#690005",
+                    "primary": "#c8c6c5",
+                    "surface-container-lowest": "#0d0e0f",
+                    "secondary-container": "#454747",
+                    "outline-variant": "#444748",
+                    "on-tertiary-container": "#d35438",
+                    "on-surface": "#e3e2e2",
+                    "on-tertiary": "#630e00",
+                    "on-secondary": "#2f3131",
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-background": "#e3e2e2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed": "#ffdad3",
+                    "surface-container-highest": "#343535",
+                    "secondary": "#c6c6c6",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface-variant": "#c4c7c7",
+                    "surface-variant": "#343535",
+                    "inverse-on-surface": "#2f3031",
+                    "surface-container-low": "#1b1c1c",
+                    "surface-container": "#1f2020",
+                    "surface-bright": "#383939",
+                    "background": "#121414",
+                    "surface": "#121414",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#1c1b1b",
+                    "tertiary": "#ffb4a4",
+                    "surface-dim": "#121414",
+                    "on-secondary-container": "#b5b5b5",
+                    "surface-container-high": "#292a2a",
+                    "outline": "#8e9192",
+                    "on-tertiary-fixed": "#3d0600",
+                    "on-primary": "#313030",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#5f5e5e",
+                    "surface-tint": "#c8c6c5",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#474646",
+                    "inverse-surface": "#e3e2e2",
+                    "tertiary-container": "#2c0300",
+                    "primary-container": "#121212",
+                    "on-primary-container": "#7e7d7d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "64px",
+                    "base": "8px",
+                    "section-gap": "128px",
+                    "stack-md": "32px",
+                    "stack-lg": "64px",
+                    "stack-sm": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Epilogue"],
+                    "body-lg": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "display-xl": ["Epilogue"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-md": ["Epilogue"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #881f07 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-on-tertiary-fixed-variant selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20 w-full">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-white tracking-widest uppercase font-['Epilogue']">Raízes de Concreto</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-orange-600 border-b-2 border-orange-600 pb-1 duration-300 ease-in-out" href="#">Arqueologia</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300 ease-in-out" href="#">Territórios</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300 ease-in-out" href="#">Memória</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300 ease-in-out" href="#">Linha do Tempo</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors">account_circle</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-[#1E1E1E] border-r border-white/10 shadow-2xl flex flex-col space-y-2 hidden lg:flex">
+<div class="px-6 py-8">
+<h2 class="text-white font-bold font-['Epilogue'] text-sm">Laboratório Urbano</h2>
+<p class="text-gray-500 text-xs font-['Epilogue']">Exploração Nível 4</p>
+</div>
+<nav class="flex flex-col">
+<a class="flex items-center gap-4 bg-white/5 text-orange-600 border-l-4 border-orange-600 px-6 py-4 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Epilogue'] text-sm font-medium">Expedições</span>
+</a>
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Epilogue'] text-sm font-medium">Arquivos</span>
+</a>
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-['Epilogue'] text-sm font-medium">Mapa Social</span>
+</a>
+<a class="flex items-center gap-4 text-gray-500 px-6 py-4 hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-['Epilogue'] text-sm font-medium">Raízes</span>
+</a>
+</nav>
+<div class="mt-auto p-6">
+<button class="w-full py-3 bg-on-tertiary-fixed-variant text-white font-label-caps text-xs uppercase tracking-widest rounded-sm hover:brightness-110 transition-all">
+                Nova Expedição
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:pl-64 pt-20 min-h-screen flex flex-col">
+<!-- Quiz Hero Section -->
+<section class="relative h-[409px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-40 mix-blend-luminosity" data-alt="dramatic wide shot of historical building architecture in Sao Paulo with strong shadows and urban textures" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFEX-dhu_y0BZz5Jm4w3BEE6BroEuaa67THPrr1ur8GLKVVEdOAKEMGCp3wGfyTTSwWFKmKLEDU69aVwx5FZwV_ApJalgQDOMvrd8yZdLLlqY1r6yjABYdlpyvlmoHcTOKO8rKWu_TXqbLKb3uDXEVnI8-iAOrMaqtl6l4qJifczd28tzzRzcWS0Rk7VjYakCA08Z788uH0WObdxbHkEIBWkP1O6ZC5qIoWq6o2LkueCQFnGMUKt2oswrluJzmOEntTaJ1ZyX39g')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end px-gutter md:px-margin pb-stack-lg max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-on-tertiary-fixed-variant bg-on-tertiary-fixed-variant/10 px-3 py-1 border border-on-tertiary-fixed-variant/20">MÓDULO 04</span>
+<span class="font-label-caps text-on-surface-variant">EXPEDIÇÃO: O CENTRO ESQUECIDO</span>
+</div>
+<h1 class="font-display-xl text-headline-lg md:text-display-xl text-white">Arqueologia das Cicatrizes</h1>
+</div>
+</section>
+<!-- Quiz Progress Bar -->
+<div class="sticky top-20 z-40 bg-surface-container-low/80 backdrop-blur-md px-gutter md:px-margin py-6 border-b border-white/5">
+<div class="max-w-4xl mx-auto w-full">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-caps text-xs text-on-surface-variant">PROGRESSO DA EXPEDIÇÃO</span>
+<span class="font-label-caps text-sm text-white">04 <span class="text-on-surface-variant">/ 12</span></span>
+</div>
+<div class="h-1 w-full bg-white/5 overflow-hidden">
+<div class="h-full bg-on-tertiary-fixed-variant transition-all duration-700 ease-out" style="width: 33%"></div>
+</div>
+</div>
+</div>
+<!-- Quiz Interaction Area -->
+<div class="flex-grow px-gutter md:px-margin py-stack-lg max-w-4xl mx-auto w-full">
+<!-- Question Card -->
+<div class="space-y-stack-md">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-px timeline-line"></div>
+<div class="flex-grow">
+<p class="font-label-caps text-on-tertiary-fixed-variant mb-2">QUESTÃO 04</p>
+<h2 class="font-headline-md text-white mb-stack-md leading-tight">
+                            Qual era a função original do Edifício Martinelli antes de se tornar um símbolo da verticalização paulistana na década de 1920?
+                        </h2>
+<!-- Options Grid -->
+<div class="grid grid-cols-1 gap-4">
+<button class="group flex items-center justify-between p-6 glass-panel text-left hover:border-on-tertiary-fixed-variant/50 transition-all duration-300">
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-on-surface-variant group-hover:text-white transition-colors">A</span>
+<span class="font-body-lg text-on-surface">Um palacete residencial de luxo para a elite cafeeira.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-on-tertiary-fixed-variant transition-opacity">arrow_forward</span>
+</button>
+<button class="group flex items-center justify-between p-6 bg-on-tertiary-fixed-variant/10 border-2 border-on-tertiary-fixed-variant text-left transition-all duration-300">
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-white">B</span>
+<span class="font-body-lg text-white">Um projeto híbrido que incluía cinema, hotel e a residência do próprio Martinelli.</span>
+</div>
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<button class="group flex items-center justify-between p-6 glass-panel text-left hover:border-on-tertiary-fixed-variant/50 transition-all duration-300">
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-on-surface-variant group-hover:text-white transition-colors">C</span>
+<span class="font-body-lg text-on-surface">A primeira sede da Bolsa de Valores de São Paulo.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-on-tertiary-fixed-variant transition-opacity">arrow_forward</span>
+</button>
+<button class="group flex items-center justify-between p-6 glass-panel text-left hover:border-on-tertiary-fixed-variant/50 transition-all duration-300">
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-on-surface-variant group-hover:text-white transition-colors">D</span>
+<span class="font-body-lg text-on-surface">Um consulado italiano destinado a centralizar o apoio aos imigrantes.</span>
+</div>
+<span class="material-symbols-outlined opacity-0 group-hover:opacity-100 text-on-tertiary-fixed-variant transition-opacity">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Historical Feedback (Expanded Content) -->
+<div class="mt-stack-lg border-l border-on-tertiary-fixed-variant pl-8 space-y-6">
+<div class="flex items-center gap-2 text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+<span class="font-label-caps text-xs uppercase tracking-widest">CONTEXTO ARQUEOLÓGICO</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 space-y-4">
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                                Giuseppe Martinelli idealizou o prédio não apenas como um arranha-céu, mas como um monumento ao seu próprio sucesso. O edifício era tão controverso em sua altura que, para provar sua segurança, Martinelli construiu sua luxuosa casa no topo — uma vila italiana completa com jardins, a centenas de metros de altura do chão de concreto.
+                            </p>
+<p class="font-body-md text-on-surface-variant italic">
+                                "O Martinelli foi a primeira grande ferida aberta no céu de São Paulo, uma cicatriz de progresso que mudou para sempre a escala humana da cidade."
+                            </p>
+</div>
+<div class="relative aspect-square bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 transition-all duration-500 cursor-zoom-in" data-alt="vintage black and white archive photograph of a historic skyscraper in a developing urban landscape with high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfJQWt-PzRKsyMMwnouM8r7kXrON0HGCLB7KQOZNpTRYIie22LZKfOnu1p5E3uhbX0xC_tcYrTY3VrSDK5Z65B79Uwq1ms46WKXX-4BZq22G5O3I5fKW29pNysQT1iJ9yG-zBvydBrwwNlEkflsmZg4OMhvwslvHLki8qmUymMCLaqozxoBnM8BIjbzXdW6RM1i_ACKTmnKh54PLKQo4clXzuNkoFZCHl0tHkx1O4FYkfC4YchdSUsxydm0cE1qRD3-JyIJpO9gA"/>
+<div class="absolute bottom-2 right-2 p-1 bg-black/50 backdrop-blur-sm text-[10px] font-label-caps text-white">ARQUIVO 1929</div>
+</div>
+</div>
+<button class="px-8 py-4 bg-white text-black font-label-caps text-sm hover:bg-on-tertiary-fixed-variant hover:text-white transition-all">
+                        PRÓXIMA PERGUNTA
+                    </button>
+</div>
+</div>
+</div>
+<!-- Result Recommendation Section (Simulated End State) -->
+<section class="mt-stack-lg border-t border-white/10 bg-surface-container-low/50 py-section-gap px-gutter md:px-margin">
+<div class="max-w-7xl mx-auto w-full">
+<div class="text-center mb-stack-lg">
+<h3 class="font-headline-lg text-white mb-4">Seu Nível de Consciência: 84%</h3>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Você demonstrou um olhar profundo sobre as camadas de São Paulo. Aqui estão os caminhos recomendados para continuar sua escavação.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Recommendation Card 1 -->
+<div class="group relative bg-surface-container p-8 border border-white/5 hover:border-on-tertiary-fixed-variant/40 transition-all">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant mb-6" style="font-variation-settings: 'FILL' 1;">book</span>
+<h4 class="font-headline-md text-white text-xl mb-4">Leitura Recomendada</h4>
+<p class="font-body-md text-on-surface-variant mb-8">"São Paulo: Uma Biografia Visual" por Benedito Lima de Toledo. Uma obra essencial para entender a evolução das formas urbanas.</p>
+<a class="font-label-caps text-xs text-white group-hover:text-on-tertiary-fixed-variant transition-colors flex items-center gap-2" href="#">
+                            ACESSAR ARQUIVO <span class="material-symbols-outlined text-xs">open_in_new</span>
+</a>
+</div>
+<!-- Recommendation Card 2 -->
+<div class="group relative bg-surface-container p-8 border border-white/5 hover:border-on-tertiary-fixed-variant/40 transition-all">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant mb-6" style="font-variation-settings: 'FILL' 1;">share</span>
+<h4 class="font-headline-md text-white text-xl mb-4">Compartilhe o Legado</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Convide outros pesquisadores para este laboratório. A memória só sobrevive quando é compartilhada.</p>
+<div class="flex gap-4">
+<button class="p-2 border border-white/10 hover:bg-white hover:text-black transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</button>
+<button class="p-2 border border-white/10 hover:bg-white hover:text-black transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</button>
+</div>
+</div>
+<!-- Recommendation Card 3 -->
+<div class="group relative bg-surface-container p-8 border border-white/5 hover:border-on-tertiary-fixed-variant/40 transition-all">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant mb-6" style="font-variation-settings: 'FILL' 1;">map</span>
+<h4 class="font-headline-md text-white text-xl mb-4">Exploração de Campo</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Participe da próxima caminhada mediada: "O Triângulo Histórico". Vagas limitadas para pesquisadores ativos.</p>
+<button class="w-full py-4 border-2 border-white text-white font-label-caps text-xs hover:bg-white hover:text-black transition-all">
+                            RESERVAR EXPEDIÇÃO
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full py-12 px-8 bg-[#121212] border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-auto">
+<div>
+<p class="font-['Epilogue'] text-lg font-bold text-white mb-2">Raízes de Concreto</p>
+<p class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600">© 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Manifesto</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Dados Abertos</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Equipe</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Contato</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Termos de Uso</a>
+</div>
+</footer>
+</main>
+</body></html>

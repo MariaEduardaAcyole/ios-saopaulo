@@ -1,0 +1,61 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #111;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #000;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(black, gray);
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 40px;
+}
+
+#mapa {
+  margin-top: 30px;
+}
+
+.bairros button {
+  display: block;
+  margin: 5px auto;
+}
+
+#comparacao {
+  margin-top: 20px;
+  font-size: 20px;
+}

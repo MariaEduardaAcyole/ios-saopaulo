@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>territórios </title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#881f07",
+                      "on-error": "#690005",
+                      "primary": "#c8c6c5",
+                      "surface-container-lowest": "#0d0e0f",
+                      "secondary-container": "#454747",
+                      "outline-variant": "#444748",
+                      "on-tertiary-container": "#d35438",
+                      "on-surface": "#e3e2e2",
+                      "on-tertiary": "#630e00",
+                      "on-secondary": "#2f3131",
+                      "tertiary-fixed-dim": "#ffb4a4",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-background": "#e3e2e2",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "tertiary-fixed": "#ffdad3",
+                      "surface-container-highest": "#343535",
+                      "secondary": "#c6c6c6",
+                      "primary-fixed": "#e5e2e1",
+                      "on-surface-variant": "#c4c7c7",
+                      "surface-variant": "#343535",
+                      "inverse-on-surface": "#2f3031",
+                      "surface-container-low": "#1b1c1c",
+                      "surface-container": "#1f2020",
+                      "surface-bright": "#383939",
+                      "background": "#121414",
+                      "surface": "#121414",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#454747",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed": "#1c1b1b",
+                      "tertiary": "#ffb4a4",
+                      "surface-dim": "#121414",
+                      "on-secondary-container": "#b5b5b5",
+                      "surface-container-high": "#292a2a",
+                      "outline": "#8e9192",
+                      "on-tertiary-fixed": "#3d0600",
+                      "on-primary": "#313030",
+                      "error-container": "#93000a",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-tint": "#c8c6c5",
+                      "on-secondary-fixed": "#1a1c1c",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#474646",
+                      "inverse-surface": "#e3e2e2",
+                      "tertiary-container": "#2c0300",
+                      "primary-container": "#121212",
+                      "on-primary-container": "#7e7d7d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin": "64px",
+                      "base": "8px",
+                      "section-gap": "128px",
+                      "stack-md": "32px",
+                      "stack-lg": "64px",
+                      "stack-sm": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Epilogue"],
+                      "body-lg": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "display-xl": ["Epilogue"],
+                      "label-caps": ["Space Grotesk"],
+                      "headline-md": ["Epilogue"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .erasure-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .erasure-card .reveal-overlay {
+            background: #121212;
+            opacity: 0.85;
+            transition: opacity 0.4s ease-in-out;
+        }
+        .erasure-card:hover .reveal-overlay {
+            opacity: 0.2;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #454747;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-on-tertiary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-black text-white tracking-widest uppercase font-headline-lg">Raízes de Concreto</div>
+<nav class="hidden md:flex items-center space-x-8 font-['Epilogue'] tracking-tighter uppercase font-bold text-sm">
+<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Arqueologia</a>
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1" href="#">Territórios</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Memória</a>
+<a class="text-gray-400 hover:text-white transition-colors duration-300" href="#">Linha do Tempo</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="relative flex items-center bg-white/5 border border-white/10 px-4 py-2 rounded-lg">
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-gray-600 w-48" placeholder="Buscar território..." type="text"/>
+<span class="material-symbols-outlined text-gray-500" data-icon="search">search</span>
+</div>
+<button class="hover:bg-white/5 p-2 rounded-full duration-300">
+<span class="material-symbols-outlined text-on-surface" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 pt-20 bg-[#1E1E1E] border-r border-white/10 flex flex-col hidden md:flex z-40">
+<div class="p-8 border-b border-white/5 mb-4">
+<div class="flex items-center space-y-1">
+<div class="w-10 h-10 bg-on-tertiary-fixed-variant rounded-lg flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white" data-icon="science">science</span>
+</div>
+<div>
+<h3 class="text-white font-bold font-headline-md text-sm leading-tight">Laboratório Urbano</h3>
+<p class="text-gray-500 text-xs uppercase tracking-widest">Exploração Nível 4</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col space-y-2 font-['Epilogue'] text-sm font-medium">
+<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="explore">explore</span>
+                Expedições
+            </a>
+<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="inventory_2">inventory_2</span>
+                Arquivos
+            </a>
+<a class="bg-white/5 text-orange-600 border-l-4 border-orange-600 px-6 py-4 flex items-center" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="map" style="font-variation-settings: 'FILL' 1;">map</span>
+                Mapa Social
+            </a>
+<a class="text-gray-500 px-6 py-4 flex items-center hover:bg-white/10 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="account_tree">account_tree</span>
+                Raízes
+            </a>
+</nav>
+<div class="mt-auto p-6">
+<button class="w-full bg-on-tertiary-fixed-variant text-white py-4 font-label-caps uppercase text-xs tracking-widest hover:brightness-110 transition-all">
+                Nova Expedição
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 pt-20 custom-scrollbar overflow-y-auto">
+<!-- Hero Header -->
+<section class="p-8 md:p-12 border-b border-white/5 bg-gradient-to-br from-[#121212] to-[#1E1E1E]">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-on-tertiary-container font-label-caps uppercase tracking-[0.2em] text-xs mb-4 block">Territórios de São Paulo</span>
+<h1 class="font-display-xl text-white leading-none">Cultura por Bairro</h1>
+</div>
+<div class="text-right max-w-md hidden lg:block">
+<p class="text-on-surface-variant font-body-lg italic opacity-70">"A cidade é um palimpsesto; sob cada camada de asfalto pulsa uma memória ancestral que recusa o silêncio."</p>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 items-center">
+<span class="text-xs uppercase font-label-caps text-gray-500 mr-2">Filtrar Origem:</span>
+<button class="px-6 py-2 border border-white/10 text-white font-label-caps text-xs uppercase hover:bg-white/5 transition-all">Todos</button>
+<button class="px-6 py-2 border border-on-tertiary-fixed-variant bg-on-tertiary-fixed-variant/10 text-on-tertiary-container font-label-caps text-xs uppercase transition-all">Negra</button>
+<button class="px-6 py-2 border border-white/10 text-white font-label-caps text-xs uppercase hover:bg-white/5 transition-all">Indígena</button>
+<button class="px-6 py-2 border border-white/10 text-white font-label-caps text-xs uppercase hover:bg-white/5 transition-all">Imigrante</button>
+</div>
+</div>
+</section>
+<!-- Neighborhood Grid -->
+<section class="p-8 md:p-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Liberdade -->
+<div class="erasure-card bg-surface-container border border-white/10 aspect-[4/5] group cursor-pointer relative">
+<div class="absolute inset-0 z-0">
+<img alt="Liberdade neighborhood landscape" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="dramatic night view of Liberdade neighborhood in Sao Paulo with iconic red lanterns and urban architecture under a moody sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHB-LGEbLbKOwz7iZZo9io2T9XYAXh_JYc0B0OQ6RstWaH8kZwfhvhQbxj241SvKxQzPRiJUDI9YhmdynQhr4eaRm8Ls_9N603pq-6Gguhj_tuVEjy-YZH5_9ZqELrj6MwJtCkG-rg0YyTbseBhYEAnMo0bvAe9zWz7cboT96vU5hRazomHybo2kBrRFl6-bhogmqZ4LTxHJ4sKaME5Vz055l0hLLMiMv7sAMXNRMr5uAIZh3ZDBdCXDuUltTfd2XK23btflqL8g"/>
+<div class="reveal-overlay absolute inset-0 z-10"></div>
+</div>
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="bg-white/10 backdrop-blur-md px-3 py-1 text-[10px] uppercase font-label-caps tracking-widest text-white border border-white/20">Imigrante / Negra</span>
+<span class="text-white/20 font-black text-4xl font-headline-lg">01</span>
+</div>
+<div class="transform group-hover:translate-y-0 translate-y-4 transition-transform duration-500">
+<h2 class="font-headline-lg text-white mb-2 leading-none uppercase">Liberdade</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">Do Largo da Forca à imigração asiática: a resistência negra sob a fachada nipônica.</p>
+<div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
+<span class="text-on-tertiary-container font-label-caps text-[10px] uppercase tracking-widest">Explorar Detalhes</span>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Bixiga -->
+<div class="erasure-card bg-surface-container border border-white/10 aspect-[4/5] group cursor-pointer relative">
+<div class="absolute inset-0 z-0">
+<img alt="Bixiga colorful streets" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="charming narrow cobblestone street in Bixiga district with colorful historic facades and overgrown bougainvillea in high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5sIQriw6nPxnOAYa0Vy7AEDFRzdrLIcTTU9yA1C5MgcUdqfQuMSLrfLIn2s7IPzJv2Ep6Eb-TsZLrhg_v-1lZ64L-85Zb3FRW_F9P6R2kAjLI0KfkThEq8sshVLmjm-320cb3IUobjyNhtrwGOuNrXHtlJJPiWWwj3GIDPpbK7YFWXx8CqH3_XWch5LVWlsNhNOoyUo8KOumkJoXxbMO2KlfcWsKIFvU6cLYvm5r8Tc2HfJ8rGSU1cbdibStgqyYvF17R75snDQ"/>
+<div class="reveal-overlay absolute inset-0 z-10"></div>
+</div>
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="bg-white/10 backdrop-blur-md px-3 py-1 text-[10px] uppercase font-label-caps tracking-widest text-white border border-white/20">Imigrante / Negra</span>
+<span class="text-white/20 font-black text-4xl font-headline-lg">02</span>
+</div>
+<div class="transform group-hover:translate-y-0 translate-y-4 transition-transform duration-500">
+<h2 class="font-headline-lg text-white mb-2 leading-none uppercase">Bixiga</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">O reduto italiano que nasceu no Quilombo do Saracura. Tradição e samba na Bela Vista.</p>
+<div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
+<span class="text-on-tertiary-container font-label-caps text-[10px] uppercase tracking-widest">Explorar Detalhes</span>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Jaraguá -->
+<div class="erasure-card bg-surface-container border border-white/10 aspect-[4/5] group cursor-pointer relative">
+<div class="absolute inset-0 z-0">
+<img alt="Jaragua mountain forest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="misty morning view of the Jaragua peak forest with dense tropical vegetation and a sense of ancient mystery and natural power" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVoYtBbAEwLuBgiYJ9usRcKIY_IeaS7aFQLmToM_kEfMFrlkcDFCoB_DfaOImspaSTFM_mV2Bpo6U7RY9a7WNwm4xAw5nZlqDPJDIXfjkU0ADloc2PPKFo99QI_fSVwMo9uTZAHWGW3DJxEYD5JDvrCvX0YzzGmKhSqC2hJpcV-5eivDwvO2jh94TWsqLgoYyGhI9Tc4rqFmVJ8vOpBeJIbTojR8S2XyeBhYXgOxZp_saYvRhl170PcO5pte4r0IVWCbbNc7SL0A"/>
+<div class="reveal-overlay absolute inset-0 z-10"></div>
+</div>
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="bg-white/10 backdrop-blur-md px-3 py-1 text-[10px] uppercase font-label-caps tracking-widest text-white border border-white/20">Indígena</span>
+<span class="text-white/20 font-black text-4xl font-headline-lg">03</span>
+</div>
+<div class="transform group-hover:translate-y-0 translate-y-4 transition-transform duration-500">
+<h2 class="font-headline-lg text-white mb-2 leading-none uppercase">Jaraguá</h2>
+<p class="text-on-surface-variant text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">O pico sagrado e a luta pela terra Guarani Mbya no horizonte de concreto.</p>
+<div class="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
+<span class="text-on-tertiary-container font-label-caps text-[10px] uppercase tracking-widest">Explorar Detalhes</span>
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Section (Simulated Expanded State) -->
+<section class="p-8 md:p-12 max-w-7xl mx-auto mb-20">
+<div class="glass-panel p-8 md:p-16 flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="mb-8 flex items-center">
+<span class="w-12 h-[1px] bg-on-tertiary-container mr-4"></span>
+<span class="text-on-tertiary-container font-label-caps uppercase tracking-widest text-xs">Dossiê de Território</span>
+</div>
+<h3 class="font-display-xl text-white leading-tight mb-8">O Ventre do Bixiga: Saracura</h3>
+<div class="space-y-6">
+<div class="border-l-2 border-on-tertiary-fixed-variant pl-6 py-2">
+<h4 class="font-label-caps text-xs uppercase text-gray-400 mb-2">Cultura Original (Séc. XIX)</h4>
+<p class="text-on-surface-variant text-body-md">Território de resistência negra. O Quilombo do Saracura abrigava populações escravizadas fugidias nas margens do córrego de mesmo nome, mantendo vivas tradições de matriz africana.</p>
+</div>
+<div class="border-l-2 border-primary pl-6 py-2">
+<h4 class="font-label-caps text-xs uppercase text-gray-400 mb-2">Cultura Atual (Séc. XXI)</h4>
+<p class="text-on-surface-variant text-body-md">Um dos bairros mais boêmios e ecléticos de São Paulo. A influência italiana nas cantinas fundiu-se com o samba da Vai-Vai, criando uma identidade híbrida única no Brasil.</p>
+</div>
+<div class="pt-8">
+<h4 class="font-label-caps text-xs uppercase text-on-tertiary-container mb-4 flex items-center">
+<span class="material-symbols-outlined mr-2 text-sm" data-icon="tips_and_updates">tips_and_updates</span>
+                                Curiosidades
+                            </h4>
+<ul class="space-y-3 text-sm text-on-surface-variant list-none">
+<li class="flex items-start">
+<span class="text-on-tertiary-container mr-2">•</span>
+<span>A Igreja de Nossa Senhora Achiropita é o coração social do bairro, atraindo milhões anualmente.</span>
+</li>
+<li class="flex items-start">
+<span class="text-on-tertiary-container mr-2">•</span>
+<span>As obras do metrô recentemente redescobriram artefatos do antigo quilombo no local.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 flex flex-col gap-6">
+<div class="relative h-[400px] overflow-hidden">
+<img alt="Modern urban detail" class="w-full h-full object-cover" data-alt="close up architectural detail of a brutalist concrete building facade in Sao Paulo with dramatic sunlight and sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR1KbIpOgJuAAm_BRzXatjTcixW0-q1kwAPW1FWJoDEIksP3VFHflvxI4khEYiCTOFjPctNTeDAGX9FjzrLB4plhc_2Z5j8DE0Da8-KnOADjGQb0pqhBOE-ePT4mMs9UNq2YCC5O-P65FuY66xSKmxCl_udd2YdlsM8ZvzHKHCm2iua2DDLmW0iF_msv4Oycsq797kvUu9_QsH4--zZAlwE6SVgKgzkZfQgECVJ2hiyGpSZX3EP2_8KFRjb1lp_ek6J-ZWQX1kUw"/>
+<div class="absolute bottom-4 left-4 bg-black/50 backdrop-blur-md p-4 border border-white/10">
+<p class="text-[10px] text-white/70 uppercase font-label-caps tracking-widest">Documentação fotográfica: Expedição #42</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="aspect-square bg-surface-container-high border border-white/10 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-fixed-variant mb-4" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-caps text-[10px] uppercase text-gray-500">Coordenadas</span>
+<span class="text-white text-xs mt-1">-23.5562, -46.6481</span>
+</div>
+<div class="aspect-square bg-surface-container-high border border-white/10 flex flex-col items-center justify-center text-center p-4">
+<span class="material-symbols-outlined text-4xl text-on-tertiary-fixed-variant mb-4" data-icon="groups">groups</span>
+<span class="font-label-caps text-[10px] uppercase text-gray-500">Comunidades Ativas</span>
+<span class="text-white text-xs mt-1">Quilombos &amp; Mov. Italianos</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full py-12 px-8 bg-[#121212] border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-bold text-white mb-4">Raízes de Concreto</div>
+<p class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600">
+                        © 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end">
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Manifesto</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Dados Abertos</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Equipe</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Contato</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Termos de Uso</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
