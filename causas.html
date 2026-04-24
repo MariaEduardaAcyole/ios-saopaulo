@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mapa Social</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Work+Sans:wght@300;400;500&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#881f07",
+                        "on-error": "#690005",
+                        "primary": "#c8c6c5",
+                        "surface-container-lowest": "#0d0e0f",
+                        "secondary-container": "#454747",
+                        "outline-variant": "#444748",
+                        "on-tertiary-container": "#d35438",
+                        "on-surface": "#e3e2e2",
+                        "on-tertiary": "#630e00",
+                        "on-secondary": "#2f3131",
+                        "tertiary-fixed-dim": "#ffb4a4",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-background": "#e3e2e2",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed": "#ffdad3",
+                        "surface-container-highest": "#343535",
+                        "secondary": "#c6c6c6",
+                        "primary-fixed": "#e5e2e1",
+                        "on-surface-variant": "#c4c7c7",
+                        "surface-variant": "#343535",
+                        "inverse-on-surface": "#2f3031",
+                        "surface-container-low": "#1b1c1c",
+                        "surface-container": "#1f2020",
+                        "surface-bright": "#383939",
+                        "background": "#121414",
+                        "surface": "#121414",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#1c1b1b",
+                        "tertiary": "#ffb4a4",
+                        "surface-dim": "#121414",
+                        "on-secondary-container": "#b5b5b5",
+                        "surface-container-high": "#292a2a",
+                        "outline": "#8e9192",
+                        "on-tertiary-fixed": "#3d0600",
+                        "on-primary": "#313030",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#5f5e5e",
+                        "surface-tint": "#c8c6c5",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#474646",
+                        "inverse-surface": "#e3e2e2",
+                        "tertiary-container": "#2c0300",
+                        "primary-container": "#121212",
+                        "on-primary-container": "#7e7d7d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin": "64px",
+                        "base": "8px",
+                        "section-gap": "128px",
+                        "stack-md": "32px",
+                        "stack-lg": "64px",
+                        "stack-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "display-xl": ["Epilogue"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
+        <div class="text-2xl font-black text-white tracking-widest uppercase font-headline-lg">Raízes de Concreto</div>
+        <nav class="flex space-x-8">
+            <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300"
+                href="./home.html">Início</a>
+            <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300"
+                href="./problematica.html">Problematica Social</a>
+            <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300"
+                href="./quiz.html">quiz</a>
+            <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300"
+                href="bairros.html">bairros</a>
+            <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300"
+                href="causas.html">Causas</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <button class="p-2 hover:bg-white/5 rounded-full transition-all text-on-surface">
+                <span class="material-symbols-outlined" data-icon="search">search</span>
+            </button>
+            <button class="p-2 hover:bg-white/5 rounded-full transition-all text-on-surface">
+                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="">
+        <!-- Hero Section -->
+        <section class="relative h-[614px] flex items-center px-8 md:px-margin overflow-hidden border-b border-white/5">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10">
+                </div>
+                <img class="w-full h-full object-cover  opacity-40 scale-110"
+                    data-alt="High contrast black and white aerial view of Sao Paulo skyscrapers with heavy morning mist and dramatic urban geometry"
+                    src="https://raiz.art.br/wp-content/uploads/2017/11/Revelando_mont.jpg" />
+            </div>
+            <div class="relative z-20 max-w-4xl">
+                <span
+                    class="font-label-caps text-orange-600 text-sm tracking-[0.3em] uppercase block mb-4">Espaços</span>
+                <h1 class="font-display-xl text-display-xl text-white mb-6 leading-[0.9]">A CIDADE QUE DISPUTA .</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Desenterramos as camadas invisíveis de São Paulo. Compare a evolução do tecido urbano e entenda as
+                    tensões sociais que moldaram a cidade que pisamos hoje.
+                </p>
+            </div>
+        </section>
+
+        <!-- Split/Slider Section: LIBERDADE -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 border-b border-white/10">
+
+            <!-- VISUAL -->
+            <div class="lg:col-span-8 relative h-[600px] overflow-hidden group">
+
+                <img class="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-105 transition duration-700 opacity-80"
+                    src="https://viagemeturismo.abril.com.br/wp-content/uploads/2024/06/img_1098.jpg?quality=70&strip=info&w=1280&h=720&crop=1" />
+
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+
+                <!-- overlay info -->
+                <div class="absolute bottom-0 left-0 p-10 max-w-xl">
+
+                    <span class="text-orange-600 text-xs uppercase tracking-widest">Madrinha Eunice é um símbolo de
+                        ativismo negro e ganhou homenagem na Liberdade </span>
+
+                    <h2 class="text-white text-4xl font-bold mt-4 mb-4">
+                        LIBERDADE: MEMÓRIA REESCRITA
+                    </h2>
+
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Hoje conhecida como o principal bairro da cultura japonesa em São Paulo, a Liberdade carrega uma
+                        história invisibilizada: o território foi um dos principais espaços de presença negra na cidade,
+                        marcado por práticas culturais, resistência e também violência histórica.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CONTEÚDO -->
+            <div class="lg:col-span-4 bg-surface-container-low p-10 flex flex-col justify-center">
+
+                <div class="space-y-6">
+
+                    <!-- bloco 1 -->
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase mb-2">ANTES</p>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Região marcada por enforcamentos públicos no período colonial e forte presença da população
+                            negra. Era um território de dor, mas também de construção cultural invisibilizada ao longo
+                            do tempo.
+                        </p>
+                    </div>
+
+                    <!-- bloco 2 -->
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase mb-2">TRANSFORMAÇÃO</p>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            Com a imigração japonesa no século XX, o bairro passa por uma ressignificação simbólica e
+                            econômica. Elementos visuais e culturais são introduzidos, criando uma nova identidade
+                            urbana.
+                        </p>
+                    </div>
+
+                    <!-- bloco 3 -->
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase mb-2">HOJE</p>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">
+                            A Liberdade se torna um polo turístico e cultural asiático. No entanto, essa nova narrativa
+                            apaga parcialmente as camadas anteriores da história, especialmente a memória negra do
+                            território.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- impacto -->
+                <div class="mt-10 border-l-2 border-orange-600 pl-4">
+                    <p class="text-xs text-gray-500 uppercase mb-2">IMPACTO SOCIAL</p>
+                    <p class="text-sm italic text-white">
+                        "A cidade não substitui histórias — ela sobrepõe narrativas, tornando algumas invisíveis."
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAUSAS SECTION -->
+        <section class="py-section-gap px-8 md:px-margin border-t border-white/10">
+
+            <div class="max-w-7xl mx-auto">
+
+                <!-- TÍTULO -->
+                <div class="mb-16 max-w-3xl">
+                    <span class="font-label-caps text-orange-600 text-xs tracking-widest uppercase mb-4 block">
+                        Raiz do Problema
+                    </span>
+
+                    <h2 class="font-headline-lg text-white mb-6">
+                        AS FORÇAS INVISÍVEIS QUE MOLDAM QUEM PODE EXISTIR NA CIDADE
+                    </h2>
+
+                    <p class="text-on-surface-variant text-body-md leading-relaxed">
+                        A transformação urbana de São Paulo não é neutra. Ela reflete estruturas históricas de poder que
+                        determinam quais corpos, culturas e histórias são valorizados — e quais são apagados.
+
+                        Por trás das mudanças no espaço urbano existem processos sociais profundos, como racismo
+                        estrutural, exclusão econômica e desvalorização cultural, que reorganizam a cidade
+                        constantemente.
+                    </p>
+                </div>
+
+                <!-- GRID -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                    <!-- RACISMO -->
+                    <div
+                        class="bg-surface-container-low p-6 border border-white/10 hover:bg-surface-container transition group">
+                        <h3 class="text-white font-bold text-xl mb-3 group-hover:text-orange-600 transition">
+                            Racismo Estrutural
+                        </h3>
+
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            A cidade foi construída a partir da exclusão da população negra. Territórios historicamente
+                            negros foram desvalorizados, removidos ou ressignificados, enquanto suas contribuições
+                            culturais foram apropriadas ou invisibilizadas.
+                        </p>
+
+                        <p class="text-xs text-gray-500 mt-4 italic">
+                            Ex: apagamento da presença negra na Liberdade
+                        </p>
+                    </div>
+
+                    <!-- GENTRIFICAÇÃO -->
+                    <div
+                        class="bg-surface-container-low p-6 border border-white/10 hover:bg-surface-container transition group">
+                        <h3 class="text-white font-bold text-xl mb-3 group-hover:text-orange-600 transition">
+                            Gentrificação
+                        </h3>
+
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Áreas populares passam por valorização econômica que expulsa moradores de baixa renda. O
+                            espaço urbano é reformulado para atender novos públicos, rompendo laços comunitários e
+                            culturais.
+                        </p>
+
+                        <p class="text-xs text-gray-500 mt-4 italic">
+                            Ex: transformação do Largo da Batata
+                        </p>
+                    </div>
+
+                    <!-- CULTURA INDIGENA -->
+                    <div
+                        class="bg-surface-container-low p-6 border border-white/10 hover:bg-surface-container transition group">
+                        <h3 class="text-white font-bold text-xl mb-3 group-hover:text-orange-600 transition">
+                            Desvalorização Indígena
+                        </h3>
+
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            A presença indígena foi historicamente apagada do território urbano. A cidade cresce sobre
+                            territórios originários sem reconhecer suas existências, culturas e direitos.
+                        </p>
+
+                        <p class="text-xs text-gray-500 mt-4 italic">
+                            A cidade apaga quem estava aqui antes dela existir
+                        </p>
+                    </div>
+
+                    <!-- ESPECULAÇÃO -->
+                    <div
+                        class="bg-surface-container-low p-6 border border-white/10 hover:bg-surface-container transition group">
+                        <h3 class="text-white font-bold text-xl mb-3 group-hover:text-orange-600 transition">
+                            Lógica do Lucro
+                        </h3>
+
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            O espaço urbano passa a ser tratado como mercadoria. Decisões priorizam valorização
+                            imobiliária e investimentos, ignorando o direito à cidade e aprofundando desigualdades
+                            sociais.
+                        </p>
+
+                        <p class="text-xs text-gray-500 mt-4 italic">
+                            A cidade deixa de ser espaço de vida e vira ativo financeiro
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- BLOCO IMPACTO VISUAL -->
+                <div class="mt-20 grid md:grid-cols-2 gap-12 items-center">
+
+                    <div>
+                        <h3 class="text-white text-2xl font-bold mb-6">
+                            O QUE ISSO PRODUZ NA PRÁTICA?
+                        </h3>
+
+                        <p class="text-on-surface-variant leading-relaxed mb-4">
+                            Essas forças não atuam isoladamente. Elas se combinam para produzir uma cidade desigual,
+                            onde o acesso ao espaço, à memória e às oportunidades é distribuído de forma desigual.
+                        </p>
+
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Bairros mudam, culturas são substituídas e populações inteiras são deslocadas — não por
+                            acaso, mas como resultado de decisões estruturais.
+                        </p>
+                    </div>
+
+                    <div class="bg-surface-container-low p-8 border border-white/10">
+                        <p class="text-sm text-gray-400 uppercase mb-4">Leitura crítica</p>
+
+                        <p class="text-white text-lg leading-relaxed italic">
+                            "A cidade não cresce — ela seleciona quem pode permanecer nela."
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- FRASE FINAL -->
+                <div class="mt-16 text-center">
+                    <p class="text-orange-600 text-xl italic max-w-2xl mx-auto">
+                        "Entender a cidade é entender quem foi silenciado para que ela existisse."
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-section-gap px-8 md:px-margin bg-on-tertiary-container relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 mix-blend-overlay">
+                <div
+                    class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent">
+                </div>
+            </div>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+                <div>
+                    <h2 class="font-display-xl text-[56px] text-white leading-none mb-8">VOCÊ GUARDA UM PEDAÇO DA
+                        CIDADE?</h2>
+                    <p class="font-body-lg text-white/80 max-w-lg mb-12">
+                        Nosso arquivo é construído coletivamente. Se você possui fotografias antigas de São Paulo em
+                        seus álbuns de família, ajude-nos a preencher as lacunas da nossa história.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <button
+                            class="px-8 py-5 bg-white text-on-tertiary-fixed-variant font-label-caps text-sm tracking-widest uppercase font-bold hover:bg-orange-100 transition-colors">
+                            ENVIAR FOTOS ANTIGAS
+                        </button>
+                        <button
+                            class="px-8 py-5 border border-white/30 text-white font-label-caps text-sm tracking-widest uppercase hover:bg-white/10 transition-colors">
+                            COMO PARTICIPAR
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative">
+                    <div
+                        class="aspect-square bg-white/5 backdrop-blur-3xl border border-white/10 p-4 transform rotate-3">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Candid high angle photo of hands sorting through a stack of old sepia-toned family photographs on a wooden table"
+                            src="https://www.gov.br/iphan/pt-br/assuntos/noticias/novo-regimento-interno-do-iphan-ja-foi-publicado/escolhida.jpg/@@images/0aa0c619-587a-476d-8869-b7f86ee478b3.jpeg" />
+                        <div
+                            class="absolute -bottom-4 -left-4 bg-orange-600 text-white p-6 font-headline-md italic text-xl shadow-2xl max-w-[200px]">
+                            "O arquivo é vivo."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="relative w-full py-20 px-8 md:px-margin bg-[#121212] border-t border-white/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+                <div>
+                    <h3 class="text-white font-black text-2xl tracking-widest uppercase mb-6">Raízes de Concreto</h3>
+                    <p class="text-gray-500 font-body-md max-w-sm mb-8">
+                        Uma iniciativa independente de arqueologia urbana dedicada a mapear e preservar as memórias
+                        invisíveis de São Paulo.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a class="text-gray-400 hover:text-orange-600 transition-colors" href="#"><span
+                                class="material-symbols-outlined" data-icon="share">share</span></a>
+                        <a class="text-gray-400 hover:text-orange-600 transition-colors" href="#"><span
+                                class="material-symbols-outlined" data-icon="mail">mail</span></a>
+                        <a class="text-gray-400 hover:text-orange-600 transition-colors" href="#"><span
+                                class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span></a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="flex flex-col space-y-4">
+                        <span class="font-label-caps text-xs text-orange-600 mb-2">PROJETO</span>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Manifesto</a>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Dados Abertos</a>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Equipe</a>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <span class="font-label-caps text-xs text-orange-600 mb-2">LEGAL</span>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Contato</a>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Termos de Uso</a>
+                        <a class="text-gray-600 hover:text-white transition-colors font-label-caps text-xs"
+                            href="#">Privacidade</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 opacity-80">
+                <p class="font-label-caps text-[10px] text-gray-600 tracking-widest uppercase mb-4 md:mb-0">
+                    © 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="font-label-caps text-[10px] text-gray-600 uppercase">Sistema Ativo: Laboratório
+                        SP-011</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
