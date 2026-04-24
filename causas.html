@@ -378,45 +378,53 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-section-gap px-8 md:px-margin bg-on-tertiary-container relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 mix-blend-overlay">
-                <div
-                    class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent">
-                </div>
+       <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
+
+    <!-- TEXTO -->
+    <div>
+        <h2 class="font-display-xl text-[56px] text-white leading-none mb-8">
+            E SE A MEMÓRIA DA CIDADE DESAPARECER?
+        </h2>
+
+        <p class="font-body-lg text-white/80 max-w-lg mb-12">
+            A preservação do patrimônio cultural não depende apenas do Estado. 
+            O <span class="text-white font-semibold">IPHAN</span> atua na proteção da memória brasileira, 
+            mas são as pessoas que mantêm essas histórias vivas no cotidiano.
+            
+            Denunciar apagamentos, registrar memórias e valorizar territórios 
+            são formas reais de resistir à exclusão cultural.
+        </p>
+
+        <div class="flex flex-wrap gap-6">
+            <button
+                class="px-8 py-5 bg-white text-on-tertiary-fixed-variant font-label-caps text-sm tracking-widest uppercase font-bold hover:bg-orange-100 transition-colors">
+                DENUNCIAR AO IPHAN
+            </button>
+
+            <button
+                class="px-8 py-5 border border-white/30 text-white font-label-caps text-sm tracking-widest uppercase hover:bg-white/10 transition-colors">
+                COMO PRESERVAR MEMÓRIAS
+            </button>
+        </div>
+    </div>
+
+    <!-- VISUAL -->
+    <div class="hidden lg:block relative">
+        <div class="aspect-square bg-white/5 backdrop-blur-3xl border border-white/10 p-4 transform rotate-3">
+
+            <img class="w-full h-full object-cover"
+                src="https://www.gov.br/iphan/pt-br/assuntos/noticias/novo-regimento-interno-do-iphan-ja-foi-publicado/escolhida.jpg/@@images/0aa0c619-587a-476d-8869-b7f86ee478b3.jpeg" />
+
+            <div
+                class="absolute -bottom-4 -left-4 bg-orange-600 text-white p-6 font-headline-md italic text-xl shadow-2xl max-w-[220px]">
+                "Quando um território é apagado, 
+                uma história inteira desaparece."
             </div>
-            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-                <div>
-                    <h2 class="font-display-xl text-[56px] text-white leading-none mb-8">VOCÊ GUARDA UM PEDAÇO DA
-                        CIDADE?</h2>
-                    <p class="font-body-lg text-white/80 max-w-lg mb-12">
-                        Nosso arquivo é construído coletivamente. Se você possui fotografias antigas de São Paulo em
-                        seus álbuns de família, ajude-nos a preencher as lacunas da nossa história.
-                    </p>
-                    <div class="flex flex-wrap gap-6">
-                        <button
-                            class="px-8 py-5 bg-white text-on-tertiary-fixed-variant font-label-caps text-sm tracking-widest uppercase font-bold hover:bg-orange-100 transition-colors">
-                            ENVIAR FOTOS ANTIGAS
-                        </button>
-                        <button
-                            class="px-8 py-5 border border-white/30 text-white font-label-caps text-sm tracking-widest uppercase hover:bg-white/10 transition-colors">
-                            COMO PARTICIPAR
-                        </button>
-                    </div>
-                </div>
-                <div class="hidden lg:block relative">
-                    <div
-                        class="aspect-square bg-white/5 backdrop-blur-3xl border border-white/10 p-4 transform rotate-3">
-                        <img class="w-full h-full object-cover"
-                            data-alt="Candid high angle photo of hands sorting through a stack of old sepia-toned family photographs on a wooden table"
-                            src="https://www.gov.br/iphan/pt-br/assuntos/noticias/novo-regimento-interno-do-iphan-ja-foi-publicado/escolhida.jpg/@@images/0aa0c619-587a-476d-8869-b7f86ee478b3.jpeg" />
-                        <div
-                            class="absolute -bottom-4 -left-4 bg-orange-600 text-white p-6 font-headline-md italic text-xl shadow-2xl max-w-[200px]">
-                            "O arquivo é vivo."
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        </div>
+    </div>
+
+</div>
 
         <!-- Footer -->
         <footer class="relative w-full py-20 px-8 md:px-margin bg-[#121212] border-t border-white/10">
