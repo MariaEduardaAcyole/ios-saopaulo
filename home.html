@@ -17,7 +17,7 @@
                       "on-tertiary-fixed-variant": "#881f07",
                       "on-error": "#690005",
                       "primary": "#c8c6c5",
-                      "surface-container-lowest": "#0d0e0f",
+                      "surface-container-lowest": "#000000",
                       "secondary-container": "#454747",
                       "outline-variant": "#444748",
                       "on-tertiary-container": "#d35438",
@@ -35,11 +35,11 @@
                       "on-surface-variant": "#c4c7c7",
                       "surface-variant": "#343535",
                       "inverse-on-surface": "#2f3031",
-                      "surface-container-low": "#1b1c1c",
+                      "surface-container-low": "#000000",
                       "surface-container": "#1f2020",
                       "surface-bright": "#383939",
-                      "background": "#121414",
-                      "surface": "#121414",
+                      "background": "#000000",
+                      "surface": "#000000",
                       "secondary-fixed": "#e2e2e2",
                       "on-secondary-fixed-variant": "#454747",
                       "on-error-container": "#ffdad6",
@@ -100,25 +100,26 @@
 <link rel="stylesheet" href="./css/home.css">
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
-<!-- Navegação Fixa -->
-<header class="fixed top-0 w-full z-50 bg-[#121212]/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-8 h-20">
-    <div class="text-2xl font-black text-white tracking-widest uppercase font-['Epilogue']">
-        Raízes de Concreto
-    </div>
-      <nav class="flex space-x-8">
-        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./home.html">Início</a>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#121212]/70 backdrop-blur-xl border-b border-white/10 h-20 px-8 flex justify-between items-center">
+<div class="text-2xl font-black text-white tracking-widest uppercase font-headline-lg">Raízes de Concreto</div>
+   <nav class="flex space-x-8">
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="home.html">Início</a>
         <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./problematica.html">Problematica Social</a>
         <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./quiz.html">quiz</a>
-        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="bairros.html">Bairros</a>
-             <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="3.html">3</a>
+        <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./bairros.html">bairros</a>
+             <a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-gray-400 hover:text-white transition-colors duration-300" href="./causas.html">Causas</a>
     </nav>
+<div class="flex items-center gap-4">
+<div class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-white/5 p-2 rounded-full transition-all">account_circle</div>
+</div>
 </header>
 
 <main class="">
 <!-- Hero Section -->
 <section id="hero" class="relative h-[921px] flex items-center px-margin archaeology-grid">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40 grayscale" data-alt="high contrast aerial view of Sao Paulo skyline at night with glowing street lights and dark concrete architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhe87k-9Nj6Zcxpoy-e8P3f1lQ1AlJETIhUM3lqzY7GFqFH9yxJbOl49iLvbRCyeT7-sJmrKiKWRMBz5Lcfd9SeBp3U8TN2b9ADM1ZvfkkrHeSbGowzY_eHpxcnttQJgeunR7J7F04Pq4EJAXuqon8cEH7jtTCdl-2gOSpRD6BOCfnh9aOSGiW-f6vQqBW17DOSKP7gX9zWGHZ4ySz7s3uQWf6bluTMERfEWwg_HK1L1VOyX7CKJx_TW6cBWM6xJJLsFhgcveIxQ"/>
+<img class="w-full h-full object-cover opacity-40 grayscale" data-alt="high contrast aerial view of Sao Paulo skyline at night with glowing street lights and dark concrete architecture" src="./assets/sao_paulo_img.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 </div>
 <div class="relative z-10 max-w-4xl">
@@ -128,120 +129,83 @@
                     Sob as camadas de asfalto e arranha-céus, reside uma metrópole esquecida. Explore as raízes invisíveis que sustentam a maior cidade da América Latina.
                 </p>
 <div class="flex space-x-6">
-<button class="px-8 py-4 bg-on-tertiary-fixed-variant text-white font-label-caps uppercase tracking-widest hover:scale-105 transition-transform duration-300">Explorar Mapa</button>
-<button class="px-8 py-4 border border-white/20 text-white font-label-caps uppercase tracking-widest hover:bg-white/5 transition-colors duration-300">Ver Manifesto</button>
+<a href="./problematica.html">
+    <button class="px-8 py-4 bg-on-tertiary-fixed-variant text-white font-label-caps uppercase tracking-widest hover:scale-105 transition-transform duration-300">Explorar Mapa</button>
+</a>
 </div>
 </div>
 </section>
 <!-- Interactive Map Section -->
 <section id="mapa" class="py-section-gap px-margin bg-surface-container-low">
-<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-white/5 pb-8">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter">Mapa Social de Conflitos e Identidades</h2>
-<p class="font-body-md text-body-md text-primary-container max-w-xl">Navegue pelos pontos de interesse arqueológico e cultural redescobertos pela nossa equipe.</p>
-</div>
-<div class="flex space-x-4 mt-6 md:mt-0">
-<span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] text-gray-400 font-label-caps uppercase">Séc. XIX</span>
-<span class="px-3 py-1 bg-on-tertiary-container text-[10px] text-white font-label-caps uppercase">Séc. XX</span>
-<span class="px-3 py-1 bg-white/5 border border-white/10 text-[10px] text-gray-400 font-label-caps uppercase">Contemporâneo</span>
-</div>
-</div>
-<div class="relative aspect-video w-full bg-surface-container overflow-hidden rounded-lg border border-white/5 group">
-<!-- Simulated Map -->
-<img class="w-full h-full object-cover opacity-60" data-alt="abstract dark textured map of an urban area with highlighted structural grid lines and golden highlights" data-location="Sao Paulo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxREcotnuy19H9-1jAgI8x82UBTyZZgszu257eOZh1UAI1BdDVBzetiYAaURzDmo6714zZrNLKDf48VPwxRzsiG9rQsjvndD7xSK9GOqRBc_buxm8sB5CgD0qgOkXuyoN1th-xZmQqISEwcSqEsYRBGTPf7ZNdVsC3ipYJVy5lVN7Bzj0GFG2b4onNJdCKXjS7HZtkTY6wrO6zHjcb-IPeMqOzIrLykDxjncVpCjq9MqeX_9Z5sX8XPzx5x9jvyr4QaV-M2hb-Bw"/>
-<!-- Markers -->
-<div class="absolute top-1/4 left-1/3 group/marker cursor-pointer">
-<div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
-<div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">LIBERDADE</p>
-<p class="text-[10px] text-gray-400 leading-relaxed">Cemitério dos Aflitos: as bases invisíveis da resistência negra no bairro oriental.</p>
-</div>
-</div>
-<div class="absolute top-1/2 left-1/2 group/marker cursor-pointer">
-<div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
-<div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">BIXIGA</p>
-<p class="text-[10px] text-gray-400 leading-relaxed">Saracura: O rio que ainda corre sob a quadra da Vai-Vai e o concreto da avenida.</p>
-</div>
-</div>
-<div class="absolute bottom-1/3 right-1/4 group/marker cursor-pointer">
-<div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
-<div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none">
-<p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">MOOCA</p>
-<p class="text-[10px] text-gray-400 leading-relaxed">Vila Maria Zélia: ruínas da primeira vila operária do Brasil em contraste com o luxo.</p>
-</div>
-</div>
-<!-- Map Overlay Controls -->
-<div class="absolute bottom-8 left-8 flex space-x-2">
-<button class="bg-[#121212]/80 backdrop-blur-md border border-white/10 p-2 text-white hover:bg-on-tertiary-container transition-colors">
-<span class="material-symbols-outlined">add</span>
-</button>
-<button class="bg-[#121212]/80 backdrop-blur-md border border-white/10 p-2 text-white hover:bg-on-tertiary-container transition-colors">
-<span class="material-symbols-outlined">remove</span>
-</button>
-<button class="bg-[#121212]/80 backdrop-blur-md border border-white/10 px-4 py-2 text-[10px] font-label-caps uppercase text-white hover:bg-on-tertiary-container transition-colors flex items-center space-x-2">
-<span class="material-symbols-outlined text-sm">layers</span>
-<span>Satélite</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Urban Archaeology Section (Bento Grid) -->
-<section id="arqueologia" class="py-section-gap px-margin archaeology-grid">
-<h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter mb-stack-lg">Arqueologia Urbana: Achados</h2>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-8 group relative h-[500px] bg-surface-container overflow-hidden border border-white/10">
-<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" data-alt="dramatic wide angle photo of an archaeological excavation site inside a modern basement with historical stone foundations visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbB99lSikSxToL9eBlhPUJqY97HNZUZuPbr-nXmYJgfreqQgqDiCtlhmiE8AN7JKDGh_-SwsYqYwfRwbcjb45ZTF2ODVErn40rYRydfedfvzV7d1cVxd0MtlYpm6097bo9OTa3NGGhRy9G_8qHcUhS_OVqkmowEqcrkomlMM0-lQSl401AEqPc8-z7Oqj0BRJLAJZFtLSBZTXPg4DNEXJucp5kUq2q2CgrSQcvU8Dp13QGGZ9h_CMUZnWMYmlu2ixaXfq-IJfACQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent opacity-80"></div>
-<div class="absolute bottom-8 left-8 right-8">
-<span class="text-on-tertiary-container font-label-caps text-xs tracking-widest uppercase mb-2 block">Destaque da Semana</span>
-<h3 class="text-headline-md font-headline-md text-white mb-4 uppercase leading-none">O Subsolo da Praça da Sé</h3>
-<p class="text-primary max-w-xl font-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-500">Restos da antiga Catedral de 1764 foram identificados durante as obras de manutenção do metrô, revelando ritos funerários coloniais.</p>
-</div>
-</div>
-<div class="md:col-span-4 flex flex-col gap-gutter">
-<div class="flex-1 bg-surface-container-high border border-white/10 p-8 hover:border-on-tertiary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-on-tertiary-container text-4xl mb-4">history_edu</span>
-<h4 class="font-headline-md text-[20px] text-white uppercase mb-4">Arquivos Digitais</h4>
-<p class="text-sm text-gray-400 mb-6 leading-relaxed">Acesso a mais de 5.000 documentos escaneados do arquivo histórico municipal sob a lente social.</p>
-<a class="inline-flex items-center space-x-2 text-on-tertiary-container font-label-caps text-xs uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
-<span>Ver Arquivo</span>
-<span class="material-symbols-outlined">trending_flat</span>
-</a>
-</div>
-<div class="flex-1 bg-surface-container-high border border-white/10 p-8 hover:border-on-tertiary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-on-tertiary-container text-4xl mb-4">video_library</span>
-<h4 class="font-headline-md text-[20px] text-white uppercase mb-4">Expedições Gravadas</h4>
-<p class="text-sm text-gray-400 mb-6 leading-relaxed">Nossa equipe documenta cada descida aos canais subterrâneos da cidade em 4K.</p>
-<a class="inline-flex items-center space-x-2 text-on-tertiary-container font-label-caps text-xs uppercase tracking-widest hover:translate-x-2 transition-transform" href="#">
-<span>Assistir</span>
-<span class="material-symbols-outlined">play_circle</span>
-</a>
-</div>
-</div>
-<div class="md:col-span-4 h-[300px] border border-white/10 relative overflow-hidden group">
-<img class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all" data-alt="close up of old textured brick wall with moss and weathering in an urban alleyway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD_KQIfKvUaFGRu5nVhtXw5leEJyQw0gYXxIq6iO5I8QBKJ59t8XNeNW__g6CgmVyZIzOKAPCKEYdvRpOBdUoCvx-YXMlfLHr8F917Pn4-FPWW4AgetE1QR5wz7JNxdlbW8aTHez3t5wlTC0j6snFRouQLE9q9v3-z73Vyc-1T68oSVdJBwP4UjW_dlkgAdcMDVd--dtpQqsSBGkNAER80RifZX7-ptgfDwsv9GqLq7TdcrPzcgd3U_Xg9ySo1w7-nanG5w-HuFQ"/>
-<div class="absolute inset-0 flex items-center justify-center p-8">
-<p class="text-white font-headline-md text-center uppercase tracking-tighter group-hover:scale-110 transition-transform">Muros que Falam</p>
-</div>
-</div>
-<div class="md:col-span-8 h-[300px] bg-on-tertiary-container/10 border border-on-tertiary-container/30 p-12 flex flex-col justify-center">
-<h3 class="text-headline-md font-headline-md text-white uppercase mb-4">Participe da Investigação</h3>
-<p class="text-primary max-w-2xl font-body-md mb-8">Encontrou algo suspeito ou histórico em sua rua? Envie fotos e localização para nossa equipe de arqueólogos urbanos validar o achado.</p>
-<button class="w-fit border border-on-tertiary-container text-on-tertiary-container px-8 py-3 font-label-caps uppercase hover:bg-on-tertiary-container hover:text-white transition-all">Reportar Achado</button>
-</div>
-</div>
+    <div class="flex flex-col items-center max-w-5xl mx-auto text-center">
+        
+        <!-- Título -->
+        <h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter mb-8">
+            Mapa Social de Conflitos e Identidades
+        </h2>
+
+        <!-- Primeiro Parágrafo -->
+        <div class="text-white font-body-md text-body-md leading-relaxed mb-12">
+            <p>
+                A construção do espaço urbano em São Paulo não se deu de maneira neutra, mas através de uma complexa cartografia de apagamentos e sobreposições que hoje compõe o que podemos chamar de um verdadeiro mapa social de conflitos e identidades. Ao percorrermos as ruas da metrópole, o que vemos na superfície é o resultado de uma narrativa de progresso seletiva, que privilegiou a estética e a economia associadas aos fluxos migratórios europeus e asiáticos enquanto camuflava as raízes de matriz africana e indígena que sustentam o alicerce material da cidade. Esse fenômeno gera uma segregação simbólica onde certas culturas são elevadas ao status de produto turístico e patrimônio oficial, como ocorre com a identidade italiana no Bixiga ou a orientalização da Liberdade, enquanto as memórias do Quilombo Saracura ou do martírio de Chaguinhas no Largo da Forca são empurradas para uma espécie de esquecimento institucionalizado. O conflito reside justamente nessa disputa por quem tem o direito de ser lembrado no espaço público, revelando que a história urbana é um campo de batalha onde interesses econômicos e o preconceito estrutural ditam quais identidades merecem o asfalto e quais devem permanecer sob o concreto.
+            </p>
+        </div>
+
+        <!-- O MAPA (Posicionado entre o 1º e 2º parágrafo) -->
+        <div class="relative aspect-video w-full md:w-4/5 mb-12 bg-surface-container overflow-hidden rounded-lg border border-white/5 group mx-auto">
+            <!-- Imagem do Mapa -->
+            <img class="w-full h-full object-cover opacity-60" data-alt="abstract dark textured map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxREcotnuy19H9-1jAgI8x82UBTyZZgszu257eOZh1UAI1BdDVBzetiYAaURzDmo6714zZrNLKDf48VPwxRzsiG9rQsjvndD7xSK9GOqRBc_buxm8sB5CgD0qgOkXuyoN1th-xZmQqISEwcSqEsYRBGTPf7ZNdVsC3ipYJVy5lVN7Bzj0GFG2b4onNJdCKXjS7HZtkTY6wrO6zHjcb-IPeMqOzIrLykDxjncVpCjq9MqeX_9Z5sX8XPzx5x9jvyr4QaV-M2hb-Bw"/>
+            
+            <!-- Marcadores (Markers) -->
+            <div class="absolute top-1/4 left-1/3 group/marker cursor-pointer">
+                <div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
+                <div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none text-left">
+                    <p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">LIBERDADE</p>
+                    <p class="text-[10px] text-gray-400 leading-relaxed">Cemitério dos Aflitos: as bases invisíveis da resistência negra no bairro oriental.</p>
+                </div>
+            </div>
+
+            <div class="absolute top-1/2 left-1/2 group/marker cursor-pointer">
+                <div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
+                <div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none text-left">
+                    <p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">BIXIGA</p>
+                    <p class="text-[10px] text-gray-400 leading-relaxed">Saracura: O rio que ainda corre sob a quadra da Vai-Vai e o concreto da avenida.</p>
+                </div>
+            </div>
+
+            <div class="absolute bottom-1/3 right-1/4 group/marker cursor-pointer">
+                <div class="w-4 h-4 bg-on-tertiary-container rounded-full marker-pulse"></div>
+                <div class="absolute top-8 left-1/2 -translate-x-1/2 bg-[#1E1E1E] border border-white/10 p-4 w-48 backdrop-blur-xl opacity-0 group-hover/marker:opacity-100 transition-opacity duration-300 pointer-events-none text-left">
+                    <p class="font-['Epilogue'] font-bold text-white text-xs uppercase mb-1">MOOCA</p>
+                    <p class="text-[10px] text-gray-400 leading-relaxed">Vila Maria Zélia: ruínas da primeira vila operária do Brasil em contraste com o luxo.</p>
+                </div>
+            </div>
+
+            <!-- Controles do Mapa -->
+            <div class="absolute bottom-8 left-8 flex space-x-2">
+                <button class="bg-[#121212]/80 backdrop-blur-md border border-white/10 p-2 text-white hover:bg-on-tertiary-container transition-colors"><span class="material-symbols-outlined">add</span></button>
+                <button class="bg-[#121212]/80 backdrop-blur-md border border-white/10 p-2 text-white hover:bg-on-tertiary-container transition-colors"><span class="material-symbols-outlined">remove</span></button>
+            </div>
+        </div>
+
+        <!-- Segundo e Terceiro Parágrafos -->
+        <div class="text-white font-body-md text-body-md leading-relaxed space-y-8">
+            <p>
+                Essa dinâmica de invisibilização é alimentada pela lógica neoliberal e pela gentrificação, processos que transformam o território em mercadoria e expulsam as populações tradicionais para as periferias, rompendo laços afetivos e desarticulando redes de apoio fundamentais para a sobrevivência cultural. O mapa social da cidade revela, assim, uma "memória da amnésia", na qual a valorização da mão de obra imigrante no pós-abolição serviu como ferramenta de marginalização do trabalhador negro, consolidando um racismo que ainda hoje orienta o planejamento urbano e a ocupação dos bairros centrais. No entanto, contra esse "memoricídio", pulsa uma resistência diária que se manifesta na manutenção de terreiros, na gastronomia que preserva a ancestralidade, nas batidas de rima das periferias e na insistência das aldeias Guarani Mbya em permanecerem no território metropolitano. Essas práticas culturais não são apenas resquícios do passado, mas formas contemporâneas de afirmação política que desafiam a homogeneização urbana e reivindicam o território como parte essencial da identidade.
+            </p>
+
+            <p>
+                Compreender este mapa de conflitos é, portanto, essencial para enfrentar as desigualdades que moldam o cotidiano paulistano. A valorização dessas histórias oprimidas não pode ser vista apenas como um resgate saudosista, mas como um passo crucial para garantir o direito à cidade e o pertencimento de todos os seus fundadores. O uso de ferramentas como a arqueologia pública, os inventários participativos e as plataformas digitais de cartografia virtual permite que as camadas invisíveis de São Paulo voltem à superfície, conectando o passado silenciado às lutas presentes por visibilidade e justiça social. Somente ao reconhecer que a identidade da metrópole é feita de múltiplos centros e de uma diversidade que precede as narrativas oficiais, será possível transformar a cidade dual e excludente em um território onde a memória não seja um privilégio, mas um bem comum compartilhado por todas as vozes que ajudaram a erguer as suas raízes de concreto.
+            </p>
+        </div>
+
+    </div>
 </section>
 <!-- Documentary Carousel Section -->
-<section id="docs" class="py-section-gap px-margin bg-surface-container-lowest">
-    html {
-        scroll-behavior: smooth;
-    }
+<section id="docs" class="py-section-gap px-margin bg-[#121212]">
 <div class="flex justify-between items-center mb-stack-lg">
 <h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter">Documentários: Vozes do Concreto</h2>
 <div class="flex space-x-2">
-<button class="w-12 h-12 border border-white/10 flex items-center justify-center text-white hover:bg-white/5"><span class="material-symbols-outlined">chevron_left</span></button>
-<button class="w-12 h-12 border border-white/10 flex items-center justify-center text-white hover:bg-white/5"><span class="material-symbols-outlined">chevron_right</span></button>
 </div>
 </div>
 <div class="flex space-x-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
@@ -299,26 +263,21 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="relative w-full py-12 px-8 bg-[#121212] border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-<div class="space-y-4">
-<div class="text-lg font-bold text-white font-['Epilogue'] uppercase tracking-widest">
-                    Raízes de Concreto
-                </div>
+<footer class="relative w-full py-12 px-8 bg-[#121212] border-t border-white/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+<div>
+<div class="text-lg font-bold text-white mb-4">Raízes de Concreto</div>
 <p class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600">
-                    © 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.
-                </p>
-<div class="flex space-x-4">
-<span class="material-symbols-outlined text-gray-600 hover:text-on-tertiary-container cursor-pointer transition-colors">public</span>
-<span class="material-symbols-outlined text-gray-600 hover:text-on-tertiary-container cursor-pointer transition-colors">photo_camera</span>
-<span class="material-symbols-outlined text-gray-600 hover:text-on-tertiary-container cursor-pointer transition-colors">alternate_email</span>
+                        © 2024 Raízes de Concreto. Preservando a memória invisível de São Paulo.
+                    </p>
 </div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end">
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Manifesto</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Dados Abertos</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Equipe</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Contato</a>
+<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-orange-600 transition-colors opacity-80 hover:opacity-100" href="#">Termos de Uso</a>
 </div>
-<div class="flex flex-wrap md:justify-end gap-x-8 gap-y-4">
-<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-on-tertiary-container transition-colors" href="#">Manifesto</a>
-<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-on-tertiary-container transition-colors" href="#">Dados Abertos</a>
-<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-on-tertiary-container transition-colors" href="#">Equipe</a>
-<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-on-tertiary-container transition-colors" href="#">Contato</a>
-<a class="font-['Epilogue'] text-xs tracking-widest uppercase text-gray-600 hover:text-on-tertiary-container transition-colors" href="#">Termos de Uso</a>
 </div>
 </footer>
 </main>
